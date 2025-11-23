@@ -33,6 +33,10 @@ jobs:
         working-directory: source
         run: yarn install --frozen-lockfile
 
+      - name: Build packages
+        working-directory: source
+        run: yarn build
+
 
       # ---------------------------------------------------------
       # NEW STEP — CDK BOOTSTRAP with qualifier "accel"
