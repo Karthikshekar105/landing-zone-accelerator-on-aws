@@ -4,7 +4,7 @@
   "definitions": {
     "IParameterReplacement": {
       "additionalProperties": false,
-      "description": "Fixed replacement value to apply throughout config files. Loaded from SSM\nparameters in the management account in the HOME_REGION.",
+      "description": "Fixed replacement value to apply throughout config files. Loaded from SSM\r\nparameters in the management account in the HOME_REGION.",
       "properties": {
         "key": {
           "$ref": "#/definitions/NonEmptyString",
@@ -23,7 +23,7 @@
     },
     "IParameterReplacementV2": {
       "additionalProperties": false,
-      "description": "Fixed replacement value to apply throughout config files. Loaded from SSM\nparameters in the management account in the HOME_REGION.",
+      "description": "Fixed replacement value to apply throughout config files. Loaded from SSM\r\nparameters in the management account in the HOME_REGION.",
       "properties": {
         "key": {
           "$ref": "#/definitions/NonEmptyString",

@@ -235,7 +235,7 @@
     },
     "IAlbListenerFixedResponseConfig": {
       "additionalProperties": false,
-      "description": "Application load balancer listener fixed response config\nIt returns a custom HTTP response.\nApplicable only when `type` under {@link ApplicationLoadBalancerListenerConfig listener} is `fixed-response`.",
+      "description": "Application load balancer listener fixed response config\r\nIt returns a custom HTTP response.\r\nApplicable only when `type` under {@link ApplicationLoadBalancerListenerConfig listener} is `fixed-response`.",
       "properties": {
         "contentType": {
           "$ref": "#/definitions/NonEmptyString",
@@ -257,7 +257,7 @@
     },
     "IAlbListenerForwardConfig": {
       "additionalProperties": false,
-      "description": "Application Load balancer listener forward config. Used to define forward action.\nApplicable only when `type` under {@link ApplicationLoadBalancerListenerConfig listener} is `forward`.",
+      "description": "Application Load balancer listener forward config. Used to define forward action.\r\nApplicable only when `type` under {@link ApplicationLoadBalancerListenerConfig listener} is `forward`.",
       "properties": {
         "targetGroupStickinessConfig": {
           "$ref": "#/definitions/IAlbListenerTargetGroupStickinessConfig"
@@ -267,7 +267,7 @@
     },
     "IAlbListenerRedirectConfig": {
       "additionalProperties": false,
-      "description": "Application Load balancer listener redirect config. Used to define redirect action.\nApplicable only when `type` under {@link ApplicationLoadBalancerListenerConfig listener} is `redirect`.",
+      "description": "Application Load balancer listener redirect config. Used to define redirect action.\r\nApplicable only when `type` under {@link ApplicationLoadBalancerListenerConfig listener} is `redirect`.",
       "properties": {
         "host": {
           "$ref": "#/definitions/NonEmptyString"
@@ -292,7 +292,7 @@
     },
     "IAlbListenerTargetGroupStickinessConfig": {
       "additionalProperties": false,
-      "description": "Application Load balancer listener forward config target group stickiness config\nApplicable only when `type` under {@link ApplicationLoadBalancerListenerConfig listener} is `forward`.",
+      "description": "Application Load balancer listener forward config target group stickiness config\r\nApplicable only when `type` under {@link ApplicationLoadBalancerListenerConfig listener} is `forward`.",
       "properties": {
         "durationSeconds": {
           "description": "The time period, in seconds, during which requests from a client should be routed to the same target group. The range is 1-604800 seconds (7 days).",
@@ -356,7 +356,7 @@
     },
     "ICentralNetworkServicesConfig": {
       "additionalProperties": false,
-      "description": "Central network services configuration.\nUse this configuration to define centralized networking services for your environment.\nCentral network services enables you to easily designate a central account that owns your\ncore network infrastructure. These network resources can be shared with other\naccounts in your organization so that workload accounts can consume them.",
+      "description": "Central network services configuration.\r\nUse this configuration to define centralized networking services for your environment.\r\nCentral network services enables you to easily designate a central account that owns your\r\ncore network infrastructure. These network resources can be shared with other\r\naccounts in your organization so that workload accounts can consume them.",
       "properties": {
         "delegatedAdminAccount": {
           "$ref": "#/definitions/NonEmptyString",
@@ -392,7 +392,7 @@
     },
     "ICertificateConfig": {
       "additionalProperties": false,
-      "description": "Amazon Certificate Manager (ACM) Configuration\n\n{@link https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html Import certificate}  or {@link https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request-public.html Request certificate} from ACM",
+      "description": "Amazon Certificate Manager (ACM) Configuration\r\n\r\n{@link https://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html Import certificate}  or {@link https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request-public.html Request certificate} from ACM",
       "properties": {
         "cert": {
           "$ref": "#/definitions/NonEmptyString",
@@ -442,7 +442,7 @@
     },
     "ICustomerGatewayConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define Customer Gateways and site-to-site VPN connections.\nA customer gateway device is a physical or software appliance that you own or manage in\nyour on-premises network (on your side of a Site-to-Site VPN connection).\nA VPN connection refers to the connection between your VPC and your own on-premises network.",
+      "description": "Use this configuration to define Customer Gateways and site-to-site VPN connections.\r\nA customer gateway device is a physical or software appliance that you own or manage in\r\nyour on-premises network (on your side of a Site-to-Site VPN connection).\r\nA VPN connection refers to the connection between your VPC and your own on-premises network.",
       "properties": {
         "account": {
           "$ref": "#/definitions/NonEmptyString",
@@ -548,7 +548,7 @@
     },
     "IDhcpOptsConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define custom DHCP options sets for your VPCs.\nCustom DHCP option sets give you control over the DNS servers, domain names,\nor Network Time Protocol (NTP) servers used by the devices in your VPC.\n\nThe following example creates a DHCP option set named `accelerator-dhcp-opts`\nin the `Network` account in the `us-east-1` region. The options set assigns\na domain name of `example.com` to hosts in the VPC and configures the DNS\nserver to `1.1.1.1`.",
+      "description": "Use this configuration to define custom DHCP options sets for your VPCs.\r\nCustom DHCP option sets give you control over the DNS servers, domain names,\r\nor Network Time Protocol (NTP) servers used by the devices in your VPC.\r\n\r\nThe following example creates a DHCP option set named `accelerator-dhcp-opts`\r\nin the `Network` account in the `us-east-1` region. The options set assigns\r\na domain name of `example.com` to hosts in the VPC and configures the DNS\r\nserver to `1.1.1.1`.",
       "properties": {
         "accounts": {
           "description": "An array of friendly account names to deploy the options set.",
@@ -614,7 +614,7 @@
     },
     "IDnsFirewallRuleGroupConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define a group of rules for your DNS firewall.\nRule groups contain one to many rules that can be associated with VPCs in your environment.\nThese rules allow you to define the behavior of your DNS firewall.\n\nThe following example creates a rule group that contains one rule entry.\nThe rule blocks a list of custom domains contained in a file in the accelerator\nconfiguration repository. The rule group is shared to the entire organization.",
+      "description": "Use this configuration to define a group of rules for your DNS firewall.\r\nRule groups contain one to many rules that can be associated with VPCs in your environment.\r\nThese rules allow you to define the behavior of your DNS firewall.\r\n\r\nThe following example creates a rule group that contains one rule entry.\r\nThe rule blocks a list of custom domains contained in a file in the accelerator\r\nconfiguration repository. The rule group is shared to the entire organization.",
       "properties": {
         "name": {
           "$ref": "#/definitions/NonEmptyString",
@@ -655,7 +655,7 @@
     },
     "IDnsFirewallRulesConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define individual rules for your DNS firewall.\nThis allows you to define the DNS firewall behavior for your VPCs.",
+      "description": "Use this configuration to define individual rules for your DNS firewall.\r\nThis allows you to define the DNS firewall behavior for your VPCs.",
       "properties": {
         "action": {
           "$ref": "#/definitions/DnsFirewallRuleActionType",
@@ -699,7 +699,7 @@
     },
     "IDnsQueryLogsConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define a centralized query logging configuration that can\nbe associated with VPCs in your environment.\nYou can use this configuration to log queries that originate from your VPCs,\nqueries to your inbound and outbound resolver endpoints,\nand queries that use Route 53 Resolver DNS firewall to allow, block, or monitor\ndomain lists.\n\nThe following example creates a query logging configuration that logs to both\nS3 and a CloudWatch Logs log group. It is shared with the entire organization.",
+      "description": "Use this configuration to define a centralized query logging configuration that can\r\nbe associated with VPCs in your environment.\r\nYou can use this configuration to log queries that originate from your VPCs,\r\nqueries to your inbound and outbound resolver endpoints,\r\nand queries that use Route 53 Resolver DNS firewall to allow, block, or monitor\r\ndomain lists.\r\n\r\nThe following example creates a query logging configuration that logs to both\r\nS3 and a CloudWatch Logs log group. It is shared with the entire organization.",
       "properties": {
         "destinations": {
           "description": "An array of destination services used to store the logs.",
@@ -815,7 +815,7 @@
     },
     "IDxVirtualInterfaceConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to create a virtual interface to a DX Gateway. Virtual interfaces\nenable access to your AWS services from your on-premises environment.\n\nThe following example creates a transit VIF called Accelerator-VIF in the Network account\non a DX connection with resource ID dxcon-example:",
+      "description": "Use this configuration to create a virtual interface to a DX Gateway. Virtual interfaces\r\nenable access to your AWS services from your on-premises environment.\r\n\r\nThe following example creates a transit VIF called Accelerator-VIF in the Network account\r\non a DX connection with resource ID dxcon-example:",
       "properties": {
         "addressFamily": {
           "$ref": "#/definitions/IpVersionType",
@@ -912,7 +912,7 @@
     },
     "IEndpointPolicyConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define VPC endpoint policies for your VPC gateway and interface endpoints.\nThe endpoint policy is a JSON policy document that controls which AWS principals can use the VPC\nendpoint to access the endpoint service.\n\nThe following example defines an endpoint policy named `Default` and references a path\nwhere a JSON policy document is stored:",
+      "description": "Use this configuration to define VPC endpoint policies for your VPC gateway and interface endpoints.\r\nThe endpoint policy is a JSON policy document that controls which AWS principals can use the VPC\r\nendpoint to access the endpoint service.\r\n\r\nThe following example defines an endpoint policy named `Default` and references a path\r\nwhere a JSON policy document is stored:",
       "properties": {
         "document": {
           "$ref": "#/definitions/NonEmptyString",
@@ -971,7 +971,7 @@
     },
     "IGatewayEndpointConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define gateway endpoints for your VPC.\nA gateway endpoint targets specific IP routes in an Amazon VPC route table,\nin the form of a prefix-list, used for traffic destined to Amazon DynamoDB\nor Amazon Simple Storage Service (Amazon S3).",
+      "description": "Use this configuration to define gateway endpoints for your VPC.\r\nA gateway endpoint targets specific IP routes in an Amazon VPC route table,\r\nin the form of a prefix-list, used for traffic destined to Amazon DynamoDB\r\nor Amazon Simple Storage Service (Amazon S3).",
       "properties": {
         "defaultPolicy": {
           "$ref": "#/definitions/NonEmptyString",
@@ -1019,7 +1019,7 @@
     },
     "IGwlbConfig": {
       "additionalProperties": false,
-      "description": "Use to define Gateway Load Balancer configurations for the accelerator.\nGateway Load Balancers enable you to deploy, scale, and manage virtual appliances,\nsuch as firewalls, intrusion detection and prevention systems, and deep packet inspection\nsystems. It combines a transparent network gateway (that is, a single entry and exit point\nfor all traffic) and distributes traffic while scaling your virtual appliances with the demand.",
+      "description": "Use to define Gateway Load Balancer configurations for the accelerator.\r\nGateway Load Balancers enable you to deploy, scale, and manage virtual appliances,\r\nsuch as firewalls, intrusion detection and prevention systems, and deep packet inspection\r\nsystems. It combines a transparent network gateway (that is, a single entry and exit point\r\nfor all traffic) and distributes traffic while scaling your virtual appliances with the demand.",
       "properties": {
         "account": {
           "$ref": "#/definitions/NonEmptyString",
@@ -1077,7 +1077,7 @@
     },
     "IGwlbEndpointConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define endpoints for your Gateway Load Balancer.\nGateway Load Balancers use Gateway Load Balancer endpoints to securely exchange\ntraffic across VPC boundaries. A Gateway Load Balancer endpoint is a VPC endpoint\nthat provides private connectivity between virtual appliances in the service provider\nVPC and application servers in the service consumer VPC.\n\nThe following example creates two Gateway Load Balancer endpoints,\n`Endpoint-A` and `Endpoint-B`. The endpoints are created in subnets named\n`Network-Inspection-A` and `Network-Inspection-B`, respectively, in the VPC named\n`Network-Inspection`.",
+      "description": "Use this configuration to define endpoints for your Gateway Load Balancer.\r\nGateway Load Balancers use Gateway Load Balancer endpoints to securely exchange\r\ntraffic across VPC boundaries. A Gateway Load Balancer endpoint is a VPC endpoint\r\nthat provides private connectivity between virtual appliances in the service provider\r\nVPC and application servers in the service consumer VPC.\r\n\r\nThe following example creates two Gateway Load Balancer endpoints,\r\n`Endpoint-A` and `Endpoint-B`. The endpoints are created in subnets named\r\n`Network-Inspection-A` and `Network-Inspection-B`, respectively, in the VPC named\r\n`Network-Inspection`.",
       "properties": {
         "account": {
           "$ref": "#/definitions/NonEmptyString",
@@ -1106,7 +1106,7 @@
     },
     "IIcmpRuleConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define ICMP rules for your network ACLs.\n\nThe following example allows inbound ICMP traffic for Mobile Host Redirect",
+      "description": "Use this configuration to define ICMP rules for your network ACLs.\r\n\r\nThe following example allows inbound ICMP traffic for Mobile Host Redirect",
       "properties": {
         "code": {
           "description": "The ICMP code number. A value of -1 indicates all types.",
@@ -1125,7 +1125,7 @@
     },
     "IInterfaceEndpointConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define interface endpoints for your VPC.\nInterface endpoints powered by AWS PrivateLink to connect your VPC to AWS services as if they were in your VPC, without the use of an internet gateway.",
+      "description": "Use this configuration to define interface endpoints for your VPC.\r\nInterface endpoints powered by AWS PrivateLink to connect your VPC to AWS services as if they were in your VPC, without the use of an internet gateway.",
       "properties": {
         "allowedCidrs": {
           "description": "(OPTIONAL) An array of source CIDRs allowed to communicate with the endpoints.",
@@ -1222,7 +1222,7 @@
     },
     "IIpamConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define an AWS-managed VPC IPAM.\nIPAM is a feature that makes it easier for you to plan, track, and monitor IP addresses for your AWS workloads.\n\nThe following example defines an IPAM that is capable of operating in the us-east-1 and us-west-2 regions:",
+      "description": "Use this configuration to define an AWS-managed VPC IPAM.\r\nIPAM is a feature that makes it easier for you to plan, track, and monitor IP addresses for your AWS workloads.\r\n\r\nThe following example defines an IPAM that is capable of operating in the us-east-1 and us-west-2 regions:",
       "properties": {
         "description": {
           "$ref": "#/definitions/NonEmptyString",
@@ -1273,7 +1273,7 @@
     },
     "IIpamPoolConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define custom IPAM pools for your VPCs. A pool is a collection of contiguous\nIP address ranges. IPAM pools enable you to organize your IP addresses according to your routing and security needs.",
+      "description": "Use this configuration to define custom IPAM pools for your VPCs. A pool is a collection of contiguous\r\nIP address ranges. IPAM pools enable you to organize your IP addresses according to your routing and security needs.",
       "properties": {
         "addressFamily": {
           "$ref": "#/definitions/IpVersionType",
@@ -1352,7 +1352,7 @@
     },
     "IIpamScopeConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define custom private IPAM scopes for your VPCs.\nAn IPAM scope is the highest-level container for an IPAM. Within scopes, pools can be created.\nCustom IPAM scopes can be used to create pools and manage resources that use the same IP space.",
+      "description": "Use this configuration to define custom private IPAM scopes for your VPCs.\r\nAn IPAM scope is the highest-level container for an IPAM. Within scopes, pools can be created.\r\nCustom IPAM scopes can be used to create pools and manage resources that use the same IP space.",
       "properties": {
         "description": {
           "$ref": "#/definitions/NonEmptyString",
@@ -1427,7 +1427,7 @@
     },
     "ILoadBalancersConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define Application Load Balancers (ALBs) or\nNetwork Load Balancers (NLBs) to be deployed in the specified VPC subnets.",
+      "description": "Use this configuration to define Application Load Balancers (ALBs) or\r\nNetwork Load Balancers (NLBs) to be deployed in the specified VPC subnets.",
       "properties": {
         "applicationLoadBalancers": {
           "description": "(OPTIONAL) An array of Application Load Balancer (ALB) configurations. Use this property to define ALBs to be deployed in the specified VPC subnets.",
@@ -1448,7 +1448,7 @@
     },
     "ILocalGatewayConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to reference existing local gateways for your Outposts.\nThe local gateway for your Outpost rack enables connectivity from your Outpost subnets to\nall AWS services that are available in the parent Region, in the same way that you access them from an Availability Zone subnet.",
+      "description": "Use this configuration to reference existing local gateways for your Outposts.\r\nThe local gateway for your Outpost rack enables connectivity from your Outpost subnets to\r\nall AWS services that are available in the parent Region, in the same way that you access them from an Availability Zone subnet.",
       "properties": {
         "id": {
           "$ref": "#/definitions/NonEmptyString",
@@ -1475,7 +1475,7 @@
     },
     "ILocalGatewayRouteTableConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to reference route tables for your Outposts local gateway.\nOutpost subnet route tables on a rack can include a route to your on-premises network.\nThe local gateway routes this traffic for low latency routing to the on-premises network.",
+      "description": "Use this configuration to reference route tables for your Outposts local gateway.\r\nOutpost subnet route tables on a rack can include a route to your on-premises network.\r\nThe local gateway routes this traffic for low latency routing to the on-premises network.",
       "properties": {
         "id": {
           "$ref": "#/definitions/NonEmptyString",
@@ -1494,7 +1494,7 @@
     },
     "INatGatewayConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define AWS-managed NAT Gateways for your VPC.\nYou can use a NAT gateway so that instances in a private subnet can connect to services outside your VPCs.",
+      "description": "Use this configuration to define AWS-managed NAT Gateways for your VPC.\r\nYou can use a NAT gateway so that instances in a private subnet can connect to services outside your VPCs.",
       "properties": {
         "allocationId": {
           "$ref": "#/definitions/NonEmptyString",
@@ -1528,7 +1528,7 @@
     },
     "INetworkAclConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define custom network ACLs for your VPC.\nA network ACL allows or denies specific inbound or outbound traffic at the subnet level.\nNetwork ACLs are stateless, which means that responses to allowed inbound traffic are subject\nto the rules for outbound traffic (and vice versa).\n\nThe following example shows an inbound and outbound rule that would allow\ninbound SSH traffic from the CIDR range 10.0.0.0/16.",
+      "description": "Use this configuration to define custom network ACLs for your VPC.\r\nA network ACL allows or denies specific inbound or outbound traffic at the subnet level.\r\nNetwork ACLs are stateless, which means that responses to allowed inbound traffic are subject\r\nto the rules for outbound traffic (and vice versa).\r\n\r\nThe following example shows an inbound and outbound rule that would allow\r\ninbound SSH traffic from the CIDR range 10.0.0.0/16.",
       "properties": {
         "inboundRules": {
           "description": "(OPTIONAL) A list of inbound rules to define for the Network ACL",
@@ -1571,7 +1571,7 @@
     },
     "INetworkAclInboundRuleConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define inbound rules for your network ACLs.\nAn inbound rule allows or denies specific inbound traffic at the subnet level.\n\nThe following example allows inbound SSH traffic from source CIDR 10.0.0.0/16:",
+      "description": "Use this configuration to define inbound rules for your network ACLs.\r\nAn inbound rule allows or denies specific inbound traffic at the subnet level.\r\n\r\nThe following example allows inbound SSH traffic from source CIDR 10.0.0.0/16:",
       "properties": {
         "action": {
           "$ref": "#/definitions/AllowDeny",
@@ -1626,7 +1626,7 @@
     },
     "INetworkAclOutboundRuleConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define outbound rules for your network ACLs.\nAn outbound rule allows or denies specific outbound traffic at the subnet level.\n\nThe following example allows outbound TCP traffic in the ephemeral port ranges to destination CIDR 10.0.0.0/16:",
+      "description": "Use this configuration to define outbound rules for your network ACLs.\r\nAn outbound rule allows or denies specific outbound traffic at the subnet level.\r\n\r\nThe following example allows outbound TCP traffic in the ephemeral port ranges to destination CIDR 10.0.0.0/16:",
       "properties": {
         "action": {
           "$ref": "#/definitions/AllowDeny",
@@ -1681,7 +1681,7 @@
     },
     "INetworkAclSubnetSelection": {
       "additionalProperties": false,
-      "description": "Network ACL subnet selection configuration.\nUse this configuration to dynamically reference a subnet as a source/destination for a network ACL.",
+      "description": "Network ACL subnet selection configuration.\r\nUse this configuration to dynamically reference a subnet as a source/destination for a network ACL.",
       "properties": {
         "account": {
           "$ref": "#/definitions/NonEmptyString",
@@ -1897,7 +1897,7 @@
     },
     "INfwConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define Network Firewalls in your environment.\nAWS Network Firewall is a stateful, managed, network firewall and intrusion\ndetection and prevention service for your virtual private cloud (VPC) that\nyou create in Amazon Virtual Private Cloud (Amazon VPC).\nWith Network Firewall, you can filter traffic at the perimeter of your VPC.\nThis includes filtering traffic going to and coming from an internet gateway,\nNAT gateway, or over VPN or AWS Direct Connect.\n\nThe following example creates a simple Network Firewall rule group, policy,\nand firewall. The policy and rule group are shared with the entire organization.\nThe firewall endpoints are created in subnets named `Subnet-A` and `Subnet-B`\nin the VPC named `Network-Inspection`.",
+      "description": "Use this configuration to define Network Firewalls in your environment.\r\nAWS Network Firewall is a stateful, managed, network firewall and intrusion\r\ndetection and prevention service for your virtual private cloud (VPC) that\r\nyou create in Amazon Virtual Private Cloud (Amazon VPC).\r\nWith Network Firewall, you can filter traffic at the perimeter of your VPC.\r\nThis includes filtering traffic going to and coming from an internet gateway,\r\nNAT gateway, or over VPN or AWS Direct Connect.\r\n\r\nThe following example creates a simple Network Firewall rule group, policy,\r\nand firewall. The policy and rule group are shared with the entire organization.\r\nThe firewall endpoints are created in subnets named `Subnet-A` and `Subnet-B`\r\nin the VPC named `Network-Inspection`.",
       "properties": {
         "firewalls": {
           "description": "An array of Network Firewall firewall configurations.",
@@ -1930,7 +1930,7 @@
     },
     "INfwFirewallConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define a Network Firewall firewall.\nAn AWS Network Firewall firewall connects a firewall policy,\nwhich defines network traffic monitoring and filtering behavior,\nto the VPC that you want to protect. The firewall configuration\nincludes specifications for the Availability Zones and subnets\nwhere the firewall endpoints are placed. It also defines high-level\nsettings like the firewall logging configuration and tagging on the AWS firewall resource.",
+      "description": "Use this configuration to define a Network Firewall firewall.\r\nAn AWS Network Firewall firewall connects a firewall policy,\r\nwhich defines network traffic monitoring and filtering behavior,\r\nto the VPC that you want to protect. The firewall configuration\r\nincludes specifications for the Availability Zones and subnets\r\nwhere the firewall endpoints are placed. It also defines high-level\r\nsettings like the firewall logging configuration and tagging on the AWS firewall resource.",
       "properties": {
         "deleteProtection": {
           "description": "(OPTIONAL) Enable for deletion protection on the firewall.",
@@ -1992,7 +1992,7 @@
     },
     "INfwFirewallPolicyConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define a Network Firewall policy.\nAn AWS Network Firewall firewall policy defines the monitoring and protection behavior\nfor a firewall. The details of the behavior are defined in the rule groups that you add\nto your policy, and in some policy default settings.",
+      "description": "Use this configuration to define a Network Firewall policy.\r\nAn AWS Network Firewall firewall policy defines the monitoring and protection behavior\r\nfor a firewall. The details of the behavior are defined in the rule groups that you add\r\nto your policy, and in some policy default settings.",
       "properties": {
         "description": {
           "$ref": "#/definitions/NonEmptyString",
@@ -2034,7 +2034,7 @@
     },
     "INfwFirewallPolicyPolicyConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define how the Network Firewall policy will behave.\nAn AWS Network Firewall firewall policy defines the monitoring and protection behavior\nfor a firewall. The details of the behavior are defined in the rule groups that you add\nto your policy, and in some policy default settings.",
+      "description": "Use this configuration to define how the Network Firewall policy will behave.\r\nAn AWS Network Firewall firewall policy defines the monitoring and protection behavior\r\nfor a firewall. The details of the behavior are defined in the rule groups that you add\r\nto your policy, and in some policy default settings.",
       "properties": {
         "statefulDefaultActions": {
           "description": "(OPTIONAL) An array of default actions to take on packets evaluated by the stateful engine.",
@@ -2105,7 +2105,7 @@
     },
     "INfwLoggingConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define logging destinations for Network Firewall.\nYou can configure AWS Network Firewall logging for your firewall's stateful engine.\nLogging gives you detailed information about network traffic, including the time that\nthe stateful engine received a packet, detailed information about the packet, and any\nstateful rule action taken against the packet. The logs are published to the log destination\nthat you've configured, where you can retrieve and view them.",
+      "description": "Use this configuration to define logging destinations for Network Firewall.\r\nYou can configure AWS Network Firewall logging for your firewall's stateful engine.\r\nLogging gives you detailed information about network traffic, including the time that\r\nthe stateful engine received a packet, detailed information about the packet, and any\r\nstateful rule action taken against the packet. The logs are published to the log destination\r\nthat you've configured, where you can retrieve and view them.",
       "properties": {
         "destination": {
           "$ref": "#/definitions/LogDestinationType",
@@ -2124,7 +2124,7 @@
     },
     "INfwRuleGroupConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define stateful and stateless rule groups for Network Firewall.\nAn AWS Network Firewall rule group is a reusable set of criteria for inspecting and handling network traffic.\nYou add one or more rule groups to a firewall policy as part of policy configuration.",
+      "description": "Use this configuration to define stateful and stateless rule groups for Network Firewall.\r\nAn AWS Network Firewall rule group is a reusable set of criteria for inspecting and handling network traffic.\r\nYou add one or more rule groups to a firewall policy as part of policy configuration.",
       "properties": {
         "capacity": {
           "description": "The capacity of the rule group.",
@@ -2175,7 +2175,7 @@
     },
     "INfwRuleGroupRuleConfig": {
       "additionalProperties": false,
-      "description": "Network Firewall rule group rule configuration.\nUsed to define rules for a Network Firewall rule group.",
+      "description": "Network Firewall rule group rule configuration.\r\nUsed to define rules for a Network Firewall rule group.",
       "properties": {
         "ruleVariables": {
           "$ref": "#/definitions/INfwRuleVariableConfig",
@@ -2197,7 +2197,7 @@
     },
     "INfwRuleSourceConfig": {
       "additionalProperties": false,
-      "description": "Network Firewall rule source configuration.\nUse this configuration to define stateful and/or stateless rules for your Network Firewall.\nThe following rules sources are supported:\n- File with list of Suricata-compatible rules\n- Domain list\n- Single Suricata-compatible rule\n- Stateful rule in IP header format\n- Stateless rules and custom actions",
+      "description": "Network Firewall rule source configuration.\r\nUse this configuration to define stateful and/or stateless rules for your Network Firewall.\r\nThe following rules sources are supported:\r\n- File with list of Suricata-compatible rules\r\n- Domain list\r\n- Single Suricata-compatible rule\r\n- Stateful rule in IP header format\r\n- Stateless rules and custom actions",
       "properties": {
         "rulesFile": {
           "$ref": "#/definitions/NonEmptyString",
@@ -2227,7 +2227,7 @@
     },
     "INfwRuleSourceCustomActionConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define to define custom actions for Network Firewall.\nYou can optionally specify a named custom action to apply.\nFor this action, Network Firewall assigns a dimension to Amazon CloudWatch metrics\nwith the name set to CustomAction and a value that you specify.",
+      "description": "Use this configuration to define to define custom actions for Network Firewall.\r\nYou can optionally specify a named custom action to apply.\r\nFor this action, Network Firewall assigns a dimension to Amazon CloudWatch metrics\r\nwith the name set to CustomAction and a value that you specify.",
       "properties": {
         "actionDefinition": {
           "$ref": "#/definitions/INfwRuleSourceCustomActionDefinitionConfig",
@@ -2246,7 +2246,7 @@
     },
     "INfwRuleSourceCustomActionDefinitionConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define custom CloudWatch metrics for Network Firewall.\nYou can optionally specify a named custom action to apply.\nFor this action, Network Firewall assigns a dimension to Amazon CloudWatch metrics\nwith the name set to CustomAction and a value that you specify.",
+      "description": "Use this configuration to define custom CloudWatch metrics for Network Firewall.\r\nYou can optionally specify a named custom action to apply.\r\nFor this action, Network Firewall assigns a dimension to Amazon CloudWatch metrics\r\nwith the name set to CustomAction and a value that you specify.",
       "properties": {
         "publishMetricAction": {
           "$ref": "#/definitions/INfwRuleSourceCustomActionDimensionConfig",
@@ -2260,7 +2260,7 @@
     },
     "INfwRuleSourceCustomActionDimensionConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define custom action dimensions to log in CloudWatch metrics.\nYou can optionally specify a named custom action to apply.\nFor this action, Network Firewall assigns a dimension to Amazon CloudWatch metrics\nwith the name set to CustomAction and a value that you specify.",
+      "description": "Use this configuration to define custom action dimensions to log in CloudWatch metrics.\r\nYou can optionally specify a named custom action to apply.\r\nFor this action, Network Firewall assigns a dimension to Amazon CloudWatch metrics\r\nwith the name set to CustomAction and a value that you specify.",
       "properties": {
         "dimensions": {
           "description": "An array of values of the custom metric dimensions to log.",
@@ -2277,7 +2277,7 @@
     },
     "INfwRuleSourceListConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define DNS domain allow and deny lists for Network Firewall.\nDomain lists allow you to configure domain name filtering for your Network Firewall.",
+      "description": "Use this configuration to define DNS domain allow and deny lists for Network Firewall.\r\nDomain lists allow you to configure domain name filtering for your Network Firewall.",
       "properties": {
         "generatedRulesType": {
           "$ref": "#/definitions/NfwGeneratedRulesType",
@@ -2307,7 +2307,7 @@
     },
     "INfwRuleSourceStatefulRuleConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define stateful rules for Network Firewall in an IP packet header format.\nThis header format can be used instead of Suricata-compatible rules to define your stateful firewall\nfiltering behavior.",
+      "description": "Use this configuration to define stateful rules for Network Firewall in an IP packet header format.\r\nThis header format can be used instead of Suricata-compatible rules to define your stateful firewall\r\nfiltering behavior.",
       "properties": {
         "action": {
           "$ref": "#/definitions/NfwStatefulRuleActionType",
@@ -2334,7 +2334,7 @@
     },
     "INfwRuleSourceStatefulRuleHeaderConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define stateful rules for Network Firewall in an IP packet header format.\nThis header format can be used instead of Suricata-compatible rules to define your stateful firewall\nfiltering behavior.",
+      "description": "Use this configuration to define stateful rules for Network Firewall in an IP packet header format.\r\nThis header format can be used instead of Suricata-compatible rules to define your stateful firewall\r\nfiltering behavior.",
       "properties": {
         "destination": {
           "$ref": "#/definitions/NonEmptyString",
@@ -2373,7 +2373,7 @@
     },
     "INfwRuleSourceStatefulRuleOptionsConfig": {
       "additionalProperties": false,
-      "description": "Network Firewall stateful rule options configuration.\nUse this configuration to specify keywords and setting metadata for stateful rules.",
+      "description": "Network Firewall stateful rule options configuration.\r\nUse this configuration to specify keywords and setting metadata for stateful rules.",
       "properties": {
         "keyword": {
           "$ref": "#/definitions/NonEmptyString",
@@ -2394,7 +2394,7 @@
     },
     "INfwRuleSourceStatelessMatchAttributesConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define stateless rule match attributes for Network Firewall.\nTo be a match, a packet must satisfy all of the match settings in the rule.",
+      "description": "Use this configuration to define stateless rule match attributes for Network Firewall.\r\nTo be a match, a packet must satisfy all of the match settings in the rule.",
       "properties": {
         "destinationPorts": {
           "description": "(OPTIONAL) An array of Network Firewall stateless port range configurations.",
@@ -2462,7 +2462,7 @@
     },
     "INfwRuleSourceStatelessRuleConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define stateless rule for your  Network Firewall.\nNetwork Firewall supports the standard stateless 5-tuple rule specification\nfor network traffic inspection. When Network Firewall finds a match between\n a rule's inspection criteria and a packet, we say that the packet matches\nthe rule and its rule group, and Network Firewall applies the rule's specified action to the packet.",
+      "description": "Use this configuration to define stateless rule for your  Network Firewall.\r\nNetwork Firewall supports the standard stateless 5-tuple rule specification\r\nfor network traffic inspection. When Network Firewall finds a match between\r\n a rule's inspection criteria and a packet, we say that the packet matches\r\nthe rule and its rule group, and Network Firewall applies the rule's specified action to the packet.",
       "properties": {
         "priority": {
           "description": "The priority number for the rule.",
@@ -2510,7 +2510,7 @@
     },
     "INfwRuleSourceStatelessTcpFlagsConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define TCP flags to inspect in stateless rules.\nOptional, standard TCP flag settings, which indicate which flags to inspect and the values to inspect for.",
+      "description": "Use this configuration to define TCP flags to inspect in stateless rules.\r\nOptional, standard TCP flag settings, which indicate which flags to inspect and the values to inspect for.",
       "properties": {
         "flags": {
           "description": "An array of TCP flags.",
@@ -2535,7 +2535,7 @@
     },
     "INfwRuleVariableConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define rule variable definitions for Network Firewall.\nRule variables can be used in Suricata-compatible and domain list rule definitions.\nThey are not supported in stateful rule IP header definitions.",
+      "description": "Use this configuration to define rule variable definitions for Network Firewall.\r\nRule variables can be used in Suricata-compatible and domain list rule definitions.\r\nThey are not supported in stateful rule IP header definitions.",
       "properties": {
         "ipSets": {
           "anyOf": [
@@ -2574,7 +2574,7 @@
     },
     "INfwRuleVariableDefinitionConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define rule variable definitions for Network Firewall.\nRule variables can be used in Suricata-compatible and domain list rule definitions.\nThey are not supported in stateful rule IP header definitions.",
+      "description": "Use this configuration to define rule variable definitions for Network Firewall.\r\nRule variables can be used in Suricata-compatible and domain list rule definitions.\r\nThey are not supported in stateful rule IP header definitions.",
       "properties": {
         "definition": {
           "description": "An array of values for the rule variable.",
@@ -2596,7 +2596,7 @@
     },
     "INfwStatefulRuleGroupReferenceConfig": {
       "additionalProperties": false,
-      "description": "Network Firewall stateful rule group reference configuration.\nUse this configuration to reference a stateful rule group in a Network Firewall policy.",
+      "description": "Network Firewall stateful rule group reference configuration.\r\nUse this configuration to reference a stateful rule group in a Network Firewall policy.",
       "properties": {
         "name": {
           "$ref": "#/definitions/NonEmptyString",
@@ -2614,7 +2614,7 @@
     },
     "INfwStatelessRuleGroupReferenceConfig": {
       "additionalProperties": false,
-      "description": "Network Firewall stateless rule group reference configuration.\nUse this configuration to reference a stateless rule group in a Network Firewall policy.",
+      "description": "Network Firewall stateless rule group reference configuration.\r\nUse this configuration to reference a stateless rule group in a Network Firewall policy.",
       "properties": {
         "name": {
           "$ref": "#/definitions/NonEmptyString",
@@ -2720,7 +2720,7 @@
     },
     "IOutpostsConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to reference Outposts that exist in your environment.\nAWS Outposts enables customers to build and run applications on premises using the same\nprogramming interfaces as in AWS Regions, while using local compute and storage resources\nfor lower latency and local data processing needs.",
+      "description": "Use this configuration to reference Outposts that exist in your environment.\r\nAWS Outposts enables customers to build and run applications on premises using the same\r\nprogramming interfaces as in AWS Regions, while using local compute and storage resources\r\nfor lower latency and local data processing needs.",
       "properties": {
         "arn": {
           "$ref": "#/definitions/NonEmptyString",
@@ -2755,7 +2755,7 @@
     },
     "IPhase1Config": {
       "additionalProperties": false,
-      "description": "Internet Key Exchange (IKE) Phase 1 tunnel options configuration.\nUse this configuration to restrict the permitted Diffie-Hellman group numbers, encryption algorithms, and integrity algorithms for IKE Phase 1 negotiations.\nYou may also modify the Phase 1 lifetime for the VPN tunnel.",
+      "description": "Internet Key Exchange (IKE) Phase 1 tunnel options configuration.\r\nUse this configuration to restrict the permitted Diffie-Hellman group numbers, encryption algorithms, and integrity algorithms for IKE Phase 1 negotiations.\r\nYou may also modify the Phase 1 lifetime for the VPN tunnel.",
       "properties": {
         "dhGroups": {
           "description": "(OPTIONAL) An array of permitted Diffie-Hellman group numbers used in the IKE Phase 1 for initial authentication.\n\nDefault - `[2, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]`",
@@ -2787,7 +2787,7 @@
     },
     "IPhase2Config": {
       "additionalProperties": false,
-      "description": "Internet Key Exchange (IKE) Phase 2 tunnel options configuration.\nUse this configuration to restrict the permitted Diffie-Hellman group numbers, encryption algorithms, and integrity algorithms for IKE Phase 2 negotiations.\nYou may also modify the Phase 2 lifetime for the VPN tunnel.",
+      "description": "Internet Key Exchange (IKE) Phase 2 tunnel options configuration.\r\nUse this configuration to restrict the permitted Diffie-Hellman group numbers, encryption algorithms, and integrity algorithms for IKE Phase 2 negotiations.\r\nYou may also modify the Phase 2 lifetime for the VPN tunnel.",
       "properties": {
         "dhGroups": {
           "description": "(OPTIONAL) An array of permitted Diffie-Hellman group numbers used in the IKE Phase 2 negotiations.\n\nDefault - `[2, 5, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]`",
@@ -2819,7 +2819,7 @@
     },
     "IPrefixListConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define custom prefix lists for your environment.\nA managed prefix list is a set of one or more CIDR blocks.\nYou can use prefix lists to make it easier to configure and maintain your security groups and route tables.\n\nThe following example creates a prefix list named `accelerator-pl` that may contain up to 10 entries.\nThe prefix list is deployed to all accounts in the organization.",
+      "description": "Use this configuration to define custom prefix lists for your environment.\r\nA managed prefix list is a set of one or more CIDR blocks.\r\nYou can use prefix lists to make it easier to configure and maintain your security groups and route tables.\r\n\r\nThe following example creates a prefix list named `accelerator-pl` that may contain up to 10 entries.\r\nThe prefix list is deployed to all accounts in the organization.",
       "properties": {
         "accounts": {
           "description": "(DEPRECATED) An array of friendly names for the accounts the prefix list is deployed.",
@@ -2876,7 +2876,7 @@
     },
     "IPrefixListSourceConfig": {
       "additionalProperties": false,
-      "description": "Prefix list security group source configuration.\nUse this configuration to define a custom prefix list as a source in a security group rule.",
+      "description": "Prefix list security group source configuration.\r\nUse this configuration to define a custom prefix list as a source in a security group rule.",
       "properties": {
         "prefixLists": {
           "description": "An array of the friendly names of prefix lists to reference.",
@@ -2893,7 +2893,7 @@
     },
     "IResolverConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define several features of Route 53 resolver, including resolver endpoints,\nDNS firewall rule groups, and DNS query logs.\nAmazon Route 53 Resolver responds recursively to DNS queries from AWS resources for public records,\nAmazon VPC-specific DNS names, and Amazon Route 53 private hosted zones, and is available by default in all VPCs.",
+      "description": "Use this configuration to define several features of Route 53 resolver, including resolver endpoints,\r\nDNS firewall rule groups, and DNS query logs.\r\nAmazon Route 53 Resolver responds recursively to DNS queries from AWS resources for public records,\r\nAmazon VPC-specific DNS names, and Amazon Route 53 private hosted zones, and is available by default in all VPCs.",
       "properties": {
         "endpoints": {
           "description": "(OPTIONAL) An array of Route 53 resolver endpoint configurations.",
@@ -2925,7 +2925,7 @@
     },
     "IResolverEndpointConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define inbound and outbound resolver endpoints.\nRoute 53 Resolver contains endpoints that you configure to answer DNS queries to\nand from your on-premises environment.",
+      "description": "Use this configuration to define inbound and outbound resolver endpoints.\r\nRoute 53 Resolver contains endpoints that you configure to answer DNS queries to\r\nand from your on-premises environment.",
       "properties": {
         "allowedCidrs": {
           "description": "(OPTIONAL) The allowed ingress/egress CIDRs for the resolver endpoint security group.",
@@ -2985,7 +2985,7 @@
     },
     "IResolverRuleConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define resolver SYSTEM and FORWARD rules for your resolver.\nIf you want Resolver to forward queries for specified domain names to your network,\nyou create one forwarding rule for each domain name and specify the name of the\ndomain for which you want to forward queries.",
+      "description": "Use this configuration to define resolver SYSTEM and FORWARD rules for your resolver.\r\nIf you want Resolver to forward queries for specified domain names to your network,\r\nyou create one forwarding rule for each domain name and specify the name of the\r\ndomain for which you want to forward queries.",
       "properties": {
         "domainName": {
           "$ref": "#/definitions/NonEmptyString",
@@ -3037,7 +3037,7 @@
     },
     "IRouteTableConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define custom route tables for your VPC.\nRoute tables contain a set of rules, called routes, to determine where network traffic from a subnet or gateway is directed.",
+      "description": "Use this configuration to define custom route tables for your VPC.\r\nRoute tables contain a set of rules, called routes, to determine where network traffic from a subnet or gateway is directed.",
       "properties": {
         "gatewayAssociation": {
           "$ref": "#/definitions/GatewayRouteTableType",
@@ -3069,7 +3069,7 @@
     },
     "IRouteTableEntryConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define static route entries in a VPC subnet or gateway route table.\nStatic routes are used determine traffic flow from your subnet to a defined destination address and target.",
+      "description": "Use this configuration to define static route entries in a VPC subnet or gateway route table.\r\nStatic routes are used determine traffic flow from your subnet to a defined destination address and target.",
       "properties": {
         "destination": {
           "$ref": "#/definitions/NonEmptyString",
@@ -3129,7 +3129,7 @@
     },
     "ISecurityGroupConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define security groups in your VPC.\nA security group acts as a firewall that controls the traffic\nallowed to and from the resources in your VPC.\nYou can choose the ports and protocols to allow for inbound and outbound traffic.\n\nThe following example creates a security group that allows inbound RDP and SSH traffic from source CIDR 10.0.0.0/16.\nIt also allows all outbound traffic.",
+      "description": "Use this configuration to define security groups in your VPC.\r\nA security group acts as a firewall that controls the traffic\r\nallowed to and from the resources in your VPC.\r\nYou can choose the ports and protocols to allow for inbound and outbound traffic.\r\n\r\nThe following example creates a security group that allows inbound RDP and SSH traffic from source CIDR 10.0.0.0/16.\r\nIt also allows all outbound traffic.",
       "properties": {
         "description": {
           "$ref": "#/definitions/NonEmptyString",
@@ -3170,7 +3170,7 @@
     },
     "ISecurityGroupRuleConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define ingress and egress rules for your security groups.\nThe rules of a security group control the inbound traffic that's allowed to reach the resources\nthat are associated with the security group. The rules also control the outbound traffic that's\nallowed to leave them.",
+      "description": "Use this configuration to define ingress and egress rules for your security groups.\r\nThe rules of a security group control the inbound traffic that's allowed to reach the resources\r\nthat are associated with the security group. The rules also control the outbound traffic that's\r\nallowed to leave them.",
       "properties": {
         "description": {
           "$ref": "#/definitions/NonEmptyString",
@@ -3241,7 +3241,7 @@
     },
     "ISecurityGroupSourceConfig": {
       "additionalProperties": false,
-      "description": "Security group source configuration.\nUse this configuration to define a security group as a source of a security group rule.",
+      "description": "Security group source configuration.\r\nUse this configuration to define a security group as a source of a security group rule.",
       "properties": {
         "securityGroups": {
           "description": "An array of the friendly names of security group rules to reference.",
@@ -3276,7 +3276,7 @@
     },
     "ISubnetConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define subnets for your VPC.\nA subnet is a range of IP addresses in your VPC that can be used to create AWS resources, such as EC2 instances.",
+      "description": "Use this configuration to define subnets for your VPC.\r\nA subnet is a range of IP addresses in your VPC that can be used to create AWS resources, such as EC2 instances.",
       "properties": {
         "assignIpv6OnCreation": {
           "description": "(OPTIONAL) Indicates whether a network interface created in this subnet receives an IPv6 address on creation.",
@@ -3377,7 +3377,7 @@
     },
     "ISubnetSourceConfig": {
       "additionalProperties": false,
-      "description": "VPC subnet security group source configuration.\nUse this configuration to dynamically reference subnet CIDRs in a security group rule.",
+      "description": "VPC subnet security group source configuration.\r\nUse this configuration to dynamically reference subnet CIDRs in a security group rule.",
       "properties": {
         "account": {
           "$ref": "#/definitions/NonEmptyString",
@@ -3603,7 +3603,7 @@
     },
     "ITransitGatewayAttachmentConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define a Transit Gateway attachment to your VPC.\nTransit Gateway attachments allow you to interconnect your virtual private clouds (VPCs) and on-premises networks.\nDefining a VPC attachment deploys an elastic network interface within VPC subnets,\nwhich is then used by the transit gateway to route traffic to and from the chosen subnets.",
+      "description": "Use this configuration to define a Transit Gateway attachment to your VPC.\r\nTransit Gateway attachments allow you to interconnect your virtual private clouds (VPCs) and on-premises networks.\r\nDefining a VPC attachment deploys an elastic network interface within VPC subnets,\r\nwhich is then used by the transit gateway to route traffic to and from the chosen subnets.",
       "properties": {
         "name": {
           "$ref": "#/definitions/NonEmptyString",
@@ -3693,7 +3693,7 @@
     },
     "ITransitGatewayConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define Transit Gateways for your environment.\nA transit gateway acts as a virtual router for traffic flowing between your virtual private clouds (VPCs) and on-premises networks.\n\nThe following example creates a TGW called Network-Main in the Network account in the us-east-1 region.",
+      "description": "Use this configuration to define Transit Gateways for your environment.\r\nA transit gateway acts as a virtual router for traffic flowing between your virtual private clouds (VPCs) and on-premises networks.\r\n\r\nThe following example creates a TGW called Network-Main in the Network account in the us-east-1 region.",
       "properties": {
         "account": {
           "$ref": "#/definitions/NonEmptyString",
@@ -3854,7 +3854,7 @@
     },
     "ITransitGatewayPeeringAccepterConfig": {
       "additionalProperties": false,
-      "description": "Transit Gateway (TGW) peering accepter configuration.\nUse this configuration to define the accepter side of the peering attachment.",
+      "description": "Transit Gateway (TGW) peering accepter configuration.\r\nUse this configuration to define the accepter side of the peering attachment.",
       "properties": {
         "account": {
           "$ref": "#/definitions/NonEmptyString",
@@ -3915,7 +3915,7 @@
     },
     "ITransitGatewayPeeringRequesterConfig": {
       "additionalProperties": false,
-      "description": "Transit Gateway (TGW) peering requester configuration.\nUse this configuration to define the requester side of the peering attachment.",
+      "description": "Transit Gateway (TGW) peering requester configuration.\r\nUse this configuration to define the requester side of the peering attachment.",
       "properties": {
         "account": {
           "$ref": "#/definitions/NonEmptyString",
@@ -3987,7 +3987,7 @@
     },
     "ITransitGatewayRouteTableConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration define route tables for your Transit Gateway. Route tables are used to configure\nrouting behaviors for your Transit Gateway.\n\nThe following example creates a TGW route table called Network-Main-Shared with no static route entries:",
+      "description": "Use this configuration define route tables for your Transit Gateway. Route tables are used to configure\r\nrouting behaviors for your Transit Gateway.\r\n\r\nThe following example creates a TGW route table called Network-Main-Shared with no static route entries:",
       "properties": {
         "name": {
           "$ref": "#/definitions/NonEmptyString",
@@ -4016,7 +4016,7 @@
     },
     "ITransitGatewayRouteTableDxGatewayEntryConfig": {
       "additionalProperties": false,
-      "description": "Transit Gateway Direct Connect Gateway static route entry configuration.\nUse this configuration to define a Direct Connect Gateway attachment as a target for Transit\nGateway static routes.",
+      "description": "Transit Gateway Direct Connect Gateway static route entry configuration.\r\nUse this configuration to define a Direct Connect Gateway attachment as a target for Transit\r\nGateway static routes.",
       "properties": {
         "directConnectGatewayName": {
           "$ref": "#/definitions/NonEmptyString",
@@ -4030,7 +4030,7 @@
     },
     "ITransitGatewayRouteTableTgwPeeringEntryConfig": {
       "additionalProperties": false,
-      "description": "Transit Gateway peering static route entry configuration.\nUsed to define a peering attachment as a target for Transit\nGateway static routes.",
+      "description": "Transit Gateway peering static route entry configuration.\r\nUsed to define a peering attachment as a target for Transit\r\nGateway static routes.",
       "properties": {
         "transitGatewayPeeringName": {
           "$ref": "#/definitions/NonEmptyString",
@@ -4044,7 +4044,7 @@
     },
     "ITransitGatewayRouteTableVpcEntryConfig": {
       "additionalProperties": false,
-      "description": "Transit Gateway VPC static route entry configuration.\nUse this configuration to define an account and VPC name as a target for Transit Gateway static route entries.",
+      "description": "Transit Gateway VPC static route entry configuration.\r\nUse this configuration to define an account and VPC name as a target for Transit Gateway static route entries.",
       "properties": {
         "account": {
           "$ref": "#/definitions/NonEmptyString",
@@ -4063,7 +4063,7 @@
     },
     "ITransitGatewayRouteTableVpnEntryConfig": {
       "additionalProperties": false,
-      "description": "Transit Gateway VPN static route entry configuration.\nUse this configuration to define a VPN attachment as a target for Transit\nGateway static routes.",
+      "description": "Transit Gateway VPN static route entry configuration.\r\nUse this configuration to define a VPN attachment as a target for Transit\r\nGateway static routes.",
       "properties": {
         "vpnConnectionName": {
           "$ref": "#/definitions/NonEmptyString",
@@ -4093,7 +4093,7 @@
     },
     "IVirtualPrivateGatewayConfig": {
       "additionalProperties": false,
-      "description": "Used to define Virtual Private Gateways that are attached to a VPC.\nYou can create an IPsec VPN connection between your VPC and your remote network.\nOn the AWS side of the Site-to-Site VPN connection, a virtual private gateway or transit\ngateway provides two VPN endpoints (tunnels) for automatic failover.",
+      "description": "Used to define Virtual Private Gateways that are attached to a VPC.\r\nYou can create an IPsec VPN connection between your VPC and your remote network.\r\nOn the AWS side of the Site-to-Site VPN connection, a virtual private gateway or transit\r\ngateway provides two VPN endpoints (tunnels) for automatic failover.",
       "properties": {
         "asn": {
           "description": "Define the ASN (Amazon Side) used for the Virtual Private Gateway",
@@ -4107,7 +4107,7 @@
     },
     "IVpcConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define a VPC that is deployed to a single account and region.\nWith Amazon Virtual Private Cloud (Amazon VPC), you can launch AWS resources in a logically\nisolated virtual network that you've defined. This virtual network closely resembles a traditional\nnetwork that you'd operate in your own data center, with the benefits of using the scalable infrastructure of AWS.",
+      "description": "Use this configuration to define a VPC that is deployed to a single account and region.\r\nWith Amazon Virtual Private Cloud (Amazon VPC), you can launch AWS resources in a logically\r\nisolated virtual network that you've defined. This virtual network closely resembles a traditional\r\nnetwork that you'd operate in your own data center, with the benefits of using the scalable infrastructure of AWS.",
       "properties": {
         "account": {
           "$ref": "#/definitions/NonEmptyString",
@@ -4417,7 +4417,7 @@
     },
     "IVpcPeeringConfig": {
       "additionalProperties": false,
-      "description": "VPC peering configuration.\nUsed to define VPC peering connections.\n\nVPC can be from vpc or vpcTemplates configuration.",
+      "description": "VPC peering configuration.\r\nUsed to define VPC peering connections.\r\n\r\nVPC can be from vpc or vpcTemplates configuration.",
       "properties": {
         "name": {
           "$ref": "#/definitions/NonEmptyString",
@@ -4446,7 +4446,7 @@
     },
     "IVpcTemplatesConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define a VPC using a standard configuration that is deployed to multiple account(s)/OU(s) defined using a `deploymentTargets` property.\nWith Amazon Virtual Private Cloud (Amazon VPC), you can launch AWS resources in a logically\nisolated virtual network that you've defined. This virtual network closely resembles a traditional\nnetwork that you'd operate in your own data center, with the benefits of using the scalable infrastructure of AWS.\n\nStatic CIDR:\n```\nvpcTemplates:\n  - name: Accelerator-Template\n    deploymentTargets:\n      organizationalUnits:\n        - Infrastructure\n    region: us-east-1\n    cidrs:\n      - 10.0.0.0/24\n    enableDnsHostnames: true\n    enableDnsSupport: true\n    instanceTenancy: default\n    routeTables: []\n    subnets: []\n    natGateways: []\n    transitGatewayAttachments: []\n    tags: []\n```\nIPAM allocation:\n```\nvpcTemplates:\n  - name: Accelerator-Template\n    deploymentTargets:\n      organizationalUnits:\n        - Infrastructure\n    region: us-east-1\n    ipamAllocations:\n      - ipamPoolName: accelerator-regional-pool\n        netmaskLength: 24\n    enableDnsHostnames: true\n    enableDnsSupport: true\n    instanceTenancy: default\n    routeTables: []\n    subnets: []\n    natGateways: []\n    transitGatewayAttachments: []\n    tags: []\n```\nStatic IPv6 CIDR:\n```\nvpcTemplates:\n  - name: Accelerator-Template\n    deploymentTargets:\n      organizationalUnits:\n        - Infrastructure\n    region: us-east-1\n    cidrs:\n      - 10.0.0.0/24\n    ipv6Cidrs:\n      - amazonProvided: true\n    enableDnsHostnames: true\n    enableDnsSupport: true\n    instanceTenancy: default\n    routeTables: []\n    subnets: []\n    natGateways: []\n    transitGatewayAttachments: []\n    tags: []\n```",
+      "description": "Use this configuration to define a VPC using a standard configuration that is deployed to multiple account(s)/OU(s) defined using a `deploymentTargets` property.\r\nWith Amazon Virtual Private Cloud (Amazon VPC), you can launch AWS resources in a logically\r\nisolated virtual network that you've defined. This virtual network closely resembles a traditional\r\nnetwork that you'd operate in your own data center, with the benefits of using the scalable infrastructure of AWS.\r\n\r\nStatic CIDR:\r\n```\r\nvpcTemplates:\r\n  - name: Accelerator-Template\r\n    deploymentTargets:\r\n      organizationalUnits:\r\n        - Infrastructure\r\n    region: us-east-1\r\n    cidrs:\r\n      - 10.0.0.0/24\r\n    enableDnsHostnames: true\r\n    enableDnsSupport: true\r\n    instanceTenancy: default\r\n    routeTables: []\r\n    subnets: []\r\n    natGateways: []\r\n    transitGatewayAttachments: []\r\n    tags: []\r\n```\r\nIPAM allocation:\r\n```\r\nvpcTemplates:\r\n  - name: Accelerator-Template\r\n    deploymentTargets:\r\n      organizationalUnits:\r\n        - Infrastructure\r\n    region: us-east-1\r\n    ipamAllocations:\r\n      - ipamPoolName: accelerator-regional-pool\r\n        netmaskLength: 24\r\n    enableDnsHostnames: true\r\n    enableDnsSupport: true\r\n    instanceTenancy: default\r\n    routeTables: []\r\n    subnets: []\r\n    natGateways: []\r\n    transitGatewayAttachments: []\r\n    tags: []\r\n```\r\nStatic IPv6 CIDR:\r\n```\r\nvpcTemplates:\r\n  - name: Accelerator-Template\r\n    deploymentTargets:\r\n      organizationalUnits:\r\n        - Infrastructure\r\n    region: us-east-1\r\n    cidrs:\r\n      - 10.0.0.0/24\r\n    ipv6Cidrs:\r\n      - amazonProvided: true\r\n    enableDnsHostnames: true\r\n    enableDnsSupport: true\r\n    instanceTenancy: default\r\n    routeTables: []\r\n    subnets: []\r\n    natGateways: []\r\n    transitGatewayAttachments: []\r\n    tags: []\r\n```",
       "properties": {
         "cidrs": {
           "description": "(OPTIONAL) A list of IPv4 CIDRs to associate with the VPC.",
@@ -4625,7 +4625,7 @@
     },
     "IVpnConnectionConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define the VPN connections that\nterminate either on a Transit Gateway or virtual private gateway.\nA VPN connection refers to the connection between your VPC and your own on-premises network.\nYou can enable access to your remote network from your VPC by creating an\nAWS Site-to-Site VPN (Site-to-Site VPN) connection, and configuring routing\nto pass traffic through the connection.\n\n**IMPORTANT**: After initial deployment of your VPN connection with any of the v1.5.0+ options noted below, you can make property changes in one of {@link VpnConnectionConfig } or {@link VpnTunnelOptionsSpecificationsConfig }, but not both.\nYou may make multiple property changes in one of those configurations if necessary. Trying to modify properties in both configurations will result in a pipeline failure. This is due to the fact that\nonly a single mutating API call can be made at a time for AWS Site-to-Site VPN connections.\n\nNote: you may manually roll back the resulting CloudFormation stack should you encounter this failure. More details on how to skip failed resources in the following reference:\nhttps://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html",
+      "description": "Use this configuration to define the VPN connections that\r\nterminate either on a Transit Gateway or virtual private gateway.\r\nA VPN connection refers to the connection between your VPC and your own on-premises network.\r\nYou can enable access to your remote network from your VPC by creating an\r\nAWS Site-to-Site VPN (Site-to-Site VPN) connection, and configuring routing\r\nto pass traffic through the connection.\r\n\r\n**IMPORTANT**: After initial deployment of your VPN connection with any of the v1.5.0+ options noted below, you can make property changes in one of {@link VpnConnectionConfig } or {@link VpnTunnelOptionsSpecificationsConfig }, but not both.\r\nYou may make multiple property changes in one of those configurations if necessary. Trying to modify properties in both configurations will result in a pipeline failure. This is due to the fact that\r\nonly a single mutating API call can be made at a time for AWS Site-to-Site VPN connections.\r\n\r\nNote: you may manually roll back the resulting CloudFormation stack should you encounter this failure. More details on how to skip failed resources in the following reference:\r\nhttps://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html",
       "properties": {
         "amazonIpv4NetworkCidr": {
           "$ref": "#/definitions/NonEmptyString",
@@ -4691,7 +4691,7 @@
     },
     "IVpnLoggingConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define CloudWatch log groups for your Site-to-Site VPN connections.\nAWS Site-to-Site VPN logs provide you with deeper visibility into your Site-to-Site VPN deployments.\nWith this feature, you have access to Site-to-Site VPN connection logs that provide details on IP Security (IPsec) tunnel establishment,\nInternet Key Exchange (IKE) negotiations, and dead peer detection (DPD) protocol messages.",
+      "description": "Use this configuration to define CloudWatch log groups for your Site-to-Site VPN connections.\r\nAWS Site-to-Site VPN logs provide you with deeper visibility into your Site-to-Site VPN deployments.\r\nWith this feature, you have access to Site-to-Site VPN connection logs that provide details on IP Security (IPsec) tunnel establishment,\r\nInternet Key Exchange (IKE) negotiations, and dead peer detection (DPD) protocol messages.",
       "properties": {
         "enable": {
           "description": "(OPTIONAL) Enable site-to-site VPN tunnel logging to CloudWatch Logs.",
@@ -4710,7 +4710,7 @@
     },
     "IVpnTunnelOptionsSpecificationsConfig": {
       "additionalProperties": false,
-      "description": "Use this configuration to define optional tunnel configurations for a site-to-site VPN connection.\n\n**IMPORTANT**: After initial deployment of your VPN connection with any of the v1.5.0+ options noted below, you can only make property changes to one VPN tunnel per core pipeline run.\nYou may make multiple property changes in that one VPN tunnel if necessary. Trying to modify properties in both tunnels will result in a pipeline failure. This is due to the fact that\nonly a single mutating API call can be made at a time for AWS Site-to-Site VPN connections.\n\nNote: you may manually roll back the resulting CloudFormation stack should you encounter this failure. More details on how to skip failed resources in the following reference:\nhttps://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html",
+      "description": "Use this configuration to define optional tunnel configurations for a site-to-site VPN connection.\r\n\r\n**IMPORTANT**: After initial deployment of your VPN connection with any of the v1.5.0+ options noted below, you can only make property changes to one VPN tunnel per core pipeline run.\r\nYou may make multiple property changes in that one VPN tunnel if necessary. Trying to modify properties in both tunnels will result in a pipeline failure. This is due to the fact that\r\nonly a single mutating API call can be made at a time for AWS Site-to-Site VPN connections.\r\n\r\nNote: you may manually roll back the resulting CloudFormation stack should you encounter this failure. More details on how to skip failed resources in the following reference:\r\nhttps://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-continueupdaterollback.html",
       "properties": {
         "dpdTimeoutAction": {
           "$ref": "#/definitions/DpdTimeoutActionType",

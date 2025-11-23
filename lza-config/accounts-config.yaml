@@ -1,0 +1,17 @@
+mandatoryAccounts:
+  - name: Management
+    description: AWS Organizations management account
+    email: 2karthik.cloudeng@gmail.com
+    organizationalUnit: Root
+
+  - name: LogArchive
+    description: Central log archive account
+    email: 2karthik.cloudeng+log@gmail.com
+    organizationalUnit: Security
+
+  - name: Audit
+    description: Security / audit account
+    email: 2karthik.cloudeng+audit@gmail.com
+    organizationalUnit: Security
+
+workloadAccounts: []

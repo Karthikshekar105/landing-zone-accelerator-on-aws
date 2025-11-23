@@ -13,7 +13,7 @@
     },
     "IActiveDirectoryConfigurationInstanceConfig": {
       "additionalProperties": false,
-      "description": "Active directory configuration instance configuration. The machine will be used to configure and manage active directory configuration.\nAccelerator can create users and groups when the following configuration is provided",
+      "description": "Active directory configuration instance configuration. The machine will be used to configure and manage active directory configuration.\r\nAccelerator can create users and groups when the following configuration is provided",
       "properties": {
         "adConnectorGroup": {
           "$ref": "#/definitions/NonEmptyString",
@@ -102,7 +102,7 @@
     },
     "IActiveDirectoryConfigurationInstanceUserDataConfig": {
       "additionalProperties": false,
-      "description": "User data scripts to create users, groups, password policy.\n\nAccelerator can provision users, groups when following user data scripts are provided, these scripts are part of Accelerator sample configuration",
+      "description": "User data scripts to create users, groups, password policy.\r\n\r\nAccelerator can provision users, groups when following user data scripts are provided, these scripts are part of Accelerator sample configuration",
       "properties": {
         "scriptFilePath": {
           "$ref": "#/definitions/NonEmptyString",
@@ -202,7 +202,7 @@
     },
     "IAssumedByConfig": {
       "additionalProperties": false,
-      "description": "AssumedBy configuration\n\nService principal:",
+      "description": "AssumedBy configuration\r\n\r\nService principal:",
       "properties": {
         "principal": {
           "$ref": "#/definitions/NonEmptyString",
@@ -381,12 +381,12 @@
         },
         "principalId": {
           "$ref": "#/definitions/NonEmptyString",
-          "deprecated": "This is a temporary property and it has been deprecated.\nPlease use principals property to specify principal name for assignment.",
+          "deprecated": "This is a temporary property and it has been deprecated.\r\nPlease use principals property to specify principal name for assignment.",
           "description": "PrincipalId that will be used for the Assignment"
         },
         "principalType": {
           "$ref": "#/definitions/PrincipalType",
-          "deprecated": "This is a temporary property and it has been deprecated.\nPlease use principals property to specify principal type for assignment.",
+          "deprecated": "This is a temporary property and it has been deprecated.\r\nPlease use principals property to specify principal type for assignment.",
           "description": "PrincipalType that will be used for the Assignment"
         },
         "principals": {
@@ -877,7 +877,7 @@
     },
     "IUserSetConfig": {
       "additionalProperties": false,
-      "description": "User set configuration\n\n```\nuserSets:\n  - deploymentTargets:\n      accounts:\n        - Management\n    users:\n      - username: accelerator-user\n        boundaryPolicy: Default-Boundary-Policy\n        group: Admins\n```",
+      "description": "User set configuration\r\n\r\n```\r\nuserSets:\r\n  - deploymentTargets:\r\n      accounts:\r\n        - Management\r\n    users:\r\n      - username: accelerator-user\r\n        boundaryPolicy: Default-Boundary-Policy\r\n        group: Admins\r\n```",
       "properties": {
         "deploymentTargets": {
           "$ref": "#/definitions/IDeploymentTargets",

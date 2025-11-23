@@ -1,0 +1,11 @@
+homeRegion: &HOME_REGION ap-southeast-2
+
+# Let LZA handle deletion of default VPCs (safe + recommended)
+defaultVpc:
+  delete: true
+  excludeAccounts: []
+
+# No TGWs / central networking yet – we’ll add later if needed
+transitGateways: []
+endpointPolicies: []
+vpcs: []

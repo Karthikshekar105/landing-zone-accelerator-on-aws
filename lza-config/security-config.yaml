@@ -1,0 +1,62 @@
+homeRegion: &HOME_REGION ap-southeast-2
+
+centralSecurityServices:
+  delegatedAdminAccount: Audit
+
+  ebsDefaultVolumeEncryption:
+    enable: false
+
+  s3PublicAccessBlock:
+    enable: false
+
+  macie:
+    enable: false
+    publishSensitiveDataFindings: false
+
+  guardduty:
+    enable: false 
+
+    s3Protection:
+      enable: false
+
+    exportConfiguration:
+      enable: false
+      destinationType: S3
+      exportFrequency: FIFTEEN_MINUTES
+
+  securityHub:
+    enable: false
+    standards: []
+
+  ssmAutomation:
+    enable: false
+    documentSets: []
+
+accessAnalyzer:
+  enable: false
+
+iamPasswordPolicy:
+  enable: false
+  allowUsersToChangePassword: true
+  hardExpiry: false
+  requireUppercaseCharacters: true
+  requireLowercaseCharacters: true
+  requireSymbols: true
+  requireNumbers: true
+  minimumPasswordLength: 14
+  passwordReusePrevention: 24
+  maxPasswordAge: 90
+
+awsConfig:
+  enable: false
+  enableConfigurationRecorder: false
+  ruleSets: []
+
+cloudWatch:
+  enable: false
+  metricSets: []
+  alarmSets: []
+
+scps: []
+
+

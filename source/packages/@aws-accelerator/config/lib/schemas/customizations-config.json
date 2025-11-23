@@ -152,7 +152,7 @@
     },
     "IAlbListenerFixedResponseConfig": {
       "additionalProperties": false,
-      "description": "Application load balancer listener fixed response config\nIt returns a custom HTTP response.\nApplicable only when `type` under {@link ApplicationLoadBalancerListenerConfig listener} is `fixed-response`.",
+      "description": "Application load balancer listener fixed response config\r\nIt returns a custom HTTP response.\r\nApplicable only when `type` under {@link ApplicationLoadBalancerListenerConfig listener} is `fixed-response`.",
       "properties": {
         "contentType": {
           "$ref": "#/definitions/NonEmptyString",
@@ -174,7 +174,7 @@
     },
     "IAlbListenerForwardConfig": {
       "additionalProperties": false,
-      "description": "Application Load balancer listener forward config. Used to define forward action.\nApplicable only when `type` under {@link ApplicationLoadBalancerListenerConfig listener} is `forward`.",
+      "description": "Application Load balancer listener forward config. Used to define forward action.\r\nApplicable only when `type` under {@link ApplicationLoadBalancerListenerConfig listener} is `forward`.",
       "properties": {
         "targetGroupStickinessConfig": {
           "$ref": "#/definitions/IAlbListenerTargetGroupStickinessConfig"
@@ -184,7 +184,7 @@
     },
     "IAlbListenerRedirectConfig": {
       "additionalProperties": false,
-      "description": "Application Load balancer listener redirect config. Used to define redirect action.\nApplicable only when `type` under {@link ApplicationLoadBalancerListenerConfig listener} is `redirect`.",
+      "description": "Application Load balancer listener redirect config. Used to define redirect action.\r\nApplicable only when `type` under {@link ApplicationLoadBalancerListenerConfig listener} is `redirect`.",
       "properties": {
         "host": {
           "$ref": "#/definitions/NonEmptyString"
@@ -209,7 +209,7 @@
     },
     "IAlbListenerTargetGroupStickinessConfig": {
       "additionalProperties": false,
-      "description": "Application Load balancer listener forward config target group stickiness config\nApplicable only when `type` under {@link ApplicationLoadBalancerListenerConfig listener} is `forward`.",
+      "description": "Application Load balancer listener forward config target group stickiness config\r\nApplicable only when `type` under {@link ApplicationLoadBalancerListenerConfig listener} is `forward`.",
       "properties": {
         "durationSeconds": {
           "description": "The time period, in seconds, during which requests from a client should be routed to the same target group. The range is 1-604800 seconds (7 days).",
@@ -224,7 +224,7 @@
     },
     "IAppConfigItem": {
       "additionalProperties": false,
-      "description": "Application configuration.\nUsed to define two tier application configurations for the accelerator.",
+      "description": "Application configuration.\r\nUsed to define two tier application configurations for the accelerator.",
       "properties": {
         "applicationLoadBalancer": {
           "$ref": "#/definitions/IApplicationLoadBalancerConfig",
@@ -542,7 +542,7 @@
     },
     "ICustomizationConfig": {
       "additionalProperties": false,
-      "description": "Defines CloudFormation Stacks and StackSets to be deployed to the environment.\nThis feature supports the deployment of customer-provided CloudFormation templates to AWS\naccounts and/or organizational units. These deployments can leverage independent CloudFormation stacks\nor CloudFormation StackSets depending on the customer's deployment preference.",
+      "description": "Defines CloudFormation Stacks and StackSets to be deployed to the environment.\r\nThis feature supports the deployment of customer-provided CloudFormation templates to AWS\r\naccounts and/or organizational units. These deployments can leverage independent CloudFormation stacks\r\nor CloudFormation StackSets depending on the customer's deployment preference.",
       "properties": {
         "cloudFormationStackSets": {
           "items": {
@@ -567,7 +567,7 @@
     },
     "ICustomizationsConfig": {
       "additionalProperties": false,
-      "description": "Defines custom CloudFormation and external web and application tier resources. We recommend creating resources\nwith native LZA features where possible.",
+      "description": "Defines custom CloudFormation and external web and application tier resources. We recommend creating resources\r\nwith native LZA features where possible.",
       "properties": {
         "applications": {
           "items": {
@@ -659,7 +659,7 @@
     },
     "IEc2FirewallAutoScalingGroupConfig": {
       "additionalProperties": false,
-      "description": "EC2 firewall autoscaling group configuration.\nUsed to define EC2-based firewall instances to be deployed in an autoscaling group.\n\n```\n- name: accelerator-firewall-asg\n  autoscaling:\n    name: firewall-asg\n    maxSize: 4\n    minSize: 1\n    desiredSize: 2\n    launchTemplate: firewall-lt\n    healthCheckGracePeriod: 300\n    healthCheckType: ELB\n    targetGroups:\n      - firewall-gwlb-tg\n    subnets:\n      - firewall-subnet-a\n      - firewall-subnet-b\n    maxInstanceLifetime: 86400\n  launchTemplate:\n    name: firewall-lt\n    blockDeviceMappings:\n      - deviceName: /dev/xvda\n        ebs:\n          deleteOnTermination: true\n          encrypted: true\n          volumeSize: 20\n    enforceImdsv2: true\n    iamInstanceProfile: firewall-profile\n    imageId: ami-123xyz\n    instanceType: c6i.xlarge\n    networkInterfaces:\n      - deleteOnTermination: true\n        description: Primary interface\n        deviceIndex: 0\n        groups:\n          - firewall-data-sg\n      - deleteOnTermination: true\n        description: Management interface\n        deviceIndex: 1\n        groups:\n          - firewall-mgmt-sg\n    userData: path/to/userdata.txt\n  vpc: Network-Inspection\n  tags: []\n```",
+      "description": "EC2 firewall autoscaling group configuration.\r\nUsed to define EC2-based firewall instances to be deployed in an autoscaling group.\r\n\r\n```\r\n- name: accelerator-firewall-asg\r\n  autoscaling:\r\n    name: firewall-asg\r\n    maxSize: 4\r\n    minSize: 1\r\n    desiredSize: 2\r\n    launchTemplate: firewall-lt\r\n    healthCheckGracePeriod: 300\r\n    healthCheckType: ELB\r\n    targetGroups:\r\n      - firewall-gwlb-tg\r\n    subnets:\r\n      - firewall-subnet-a\r\n      - firewall-subnet-b\r\n    maxInstanceLifetime: 86400\r\n  launchTemplate:\r\n    name: firewall-lt\r\n    blockDeviceMappings:\r\n      - deviceName: /dev/xvda\r\n        ebs:\r\n          deleteOnTermination: true\r\n          encrypted: true\r\n          volumeSize: 20\r\n    enforceImdsv2: true\r\n    iamInstanceProfile: firewall-profile\r\n    imageId: ami-123xyz\r\n    instanceType: c6i.xlarge\r\n    networkInterfaces:\r\n      - deleteOnTermination: true\r\n        description: Primary interface\r\n        deviceIndex: 0\r\n        groups:\r\n          - firewall-data-sg\r\n      - deleteOnTermination: true\r\n        description: Management interface\r\n        deviceIndex: 1\r\n        groups:\r\n          - firewall-mgmt-sg\r\n    userData: path/to/userdata.txt\r\n  vpc: Network-Inspection\r\n  tags: []\r\n```",
       "properties": {
         "account": {
           "$ref": "#/definitions/NonEmptyString",
@@ -718,7 +718,7 @@
     },
     "IEc2FirewallConfig": {
       "additionalProperties": false,
-      "description": "EC2 firewall configuration.\nUsed to define EC2-based firewall and management appliances",
+      "description": "EC2 firewall configuration.\r\nUsed to define EC2-based firewall and management appliances",
       "properties": {
         "autoscalingGroups": {
           "description": "Define EC2-based firewall instances in autoscaling groups",
@@ -753,7 +753,7 @@
     },
     "IEc2FirewallInstanceConfig": {
       "additionalProperties": false,
-      "description": "EC2 firewall instance configuration.\nUse to define an array of standalone firewall instances",
+      "description": "EC2 firewall instance configuration.\r\nUse to define an array of standalone firewall instances",
       "properties": {
         "account": {
           "$ref": "#/definitions/NonEmptyString",

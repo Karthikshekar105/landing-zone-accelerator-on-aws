@@ -1,0 +1,13 @@
+enable: true
+
+organizationalUnits:
+  - name: eTest-NSWRA-Payer
+  - name: Sandbox
+  - name: Security
+  - name: Workloads
+
+serviceControlPolicies: []
+taggingPolicies: []
+backupPolicies: []
+
+

@@ -4,7 +4,7 @@
   "definitions": {
     "IBackupPolicyConfig": {
       "additionalProperties": false,
-      "description": "Organization backup policy\n\nBackup policies enable you to deploy organization-wide backup plans to help ensure compliance across your organization's accounts.\nUsing policies helps ensure consistency in how you implement your backup plans",
+      "description": "Organization backup policy\r\n\r\nBackup policies enable you to deploy organization-wide backup plans to help ensure compliance across your organization's accounts.\r\nUsing policies helps ensure consistency in how you implement your backup plans",
       "properties": {
         "deploymentTargets": {
           "$ref": "#/definitions/IDeploymentTargets",
@@ -33,7 +33,7 @@
     },
     "IChatbotPolicyConfig": {
       "additionalProperties": false,
-      "description": "Chatbot policy.\n\nChatbot policies allow you to control access to an organization's accounts\nfrom chat applications such as Slack and Microsoft Teams.",
+      "description": "Chatbot policy.\r\n\r\nChatbot policies allow you to control access to an organization's accounts\r\nfrom chat applications such as Slack and Microsoft Teams.",
       "properties": {
         "deploymentTargets": {
           "$ref": "#/definitions/IDeploymentTargets",
@@ -353,7 +353,7 @@
     },
     "ITaggingPolicyConfig": {
       "additionalProperties": false,
-      "description": "Organizations tag policy.\n\nTag policies help you standardize tags on all tagged resources across your organization.\nYou can use tag policies to define tag keys (including how they should be capitalized) and their allowed values.",
+      "description": "Organizations tag policy.\r\n\r\nTag policies help you standardize tags on all tagged resources across your organization.\r\nYou can use tag policies to define tag keys (including how they should be capitalized) and their allowed values.",
       "properties": {
         "deploymentTargets": {
           "$ref": "#/definitions/IDeploymentTargets",

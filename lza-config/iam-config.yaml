@@ -1,0 +1,12 @@
+# Minimal IAM configuration for LZA
+
+managedPolicies: []
+roles: []
+groups: []
+users: []
+
+identityCenter:
+  name: identity-center
+  permissionSets: []
+  assignments: []
+

@@ -1,0 +1,30 @@
+homeRegion: &HOME_REGION ap-southeast-2
+
+enabledRegions:
+  - *HOME_REGION
+
+managementAccountAccessRole: AWSControlTowerExecution
+
+cloudwatchLogRetentionInDays: 3653
+
+centralizeCdkBuckets:
+  enable: true
+
+terminationProtection: true
+
+controlTower:
+  enable: true
+
+logging:
+  account: LogArchive
+
+  cloudtrail:
+    enable: false
+    organizationTrail: false
+
+  sessionManager:
+    enable: false
+    sendToCloudWatchLogs: false
+    sendToS3: false
+
+

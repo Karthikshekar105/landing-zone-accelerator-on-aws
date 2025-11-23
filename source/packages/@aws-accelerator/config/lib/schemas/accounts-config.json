@@ -116,7 +116,7 @@
     },
     "IGovCloudAccountConfig": {
       "additionalProperties": false,
-      "description": "GovCloud Account configuration\nUsed instead of the account configuration in the commercial\npartition when creating GovCloud partition linked accounts.",
+      "description": "GovCloud Account configuration\r\nUsed instead of the account configuration in the commercial\r\npartition when creating GovCloud partition linked accounts.",
       "properties": {
         "accountAlias": {
           "$ref": "#/definitions/NonEmptyNoSpaceString",
