@@ -1,0 +1,71 @@
+name: LZA CDK Deploy
+
+on:
+  push:
+    branches:
+      - feature-new-azla   # Add 'main' when ready
+  workflow_dispatch: {}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write   # required for OIDC
+      contents: read    # checkout
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::283708190530:role/GitHubActions-LZA-DeployRole
+          aws-region: ap-southeast-2
+
+      - name: Install NPM dependencies
+        working-directory: source
+        run: npm ci
+
+      # ---------------------------------------------------------
+      # NEW STEP — CDK BOOTSTRAP with qualifier "accel"
+      # ---------------------------------------------------------
+      - name: CDK Bootstrap (accel)
+        working-directory: source/packages/@aws-accelerator/accelerator
+        run: |
+          npx cdk bootstrap \
+            --qualifier accel \
+            -c config-dir=../../../../lza-config \
+            -c config-mode=local \
+            -c partition=aws \
+            aws://283708190530/ap-southeast-2
+
+      # ---------------------------------------------------------
+      # CDK Synth
+      # ---------------------------------------------------------
+      - name: CDK Synth
+        working-directory: source/packages/@aws-accelerator/accelerator
+        run: |
+          npx cdk synth \
+            -c config-dir=../../../../lza-config \
+            -c config-mode=local \
+            -c partition=aws
+
+      # ---------------------------------------------------------
+      # CDK Deploy
+      # ---------------------------------------------------------
+      - name: CDK Deploy (LZA)
+        working-directory: source/packages/@aws-accelerator/accelerator
+        run: |
+          npx cdk deploy --all \
+            --require-approval never \
+            -c config-dir=../../../../lza-config \
+            -c config-mode=local \
+            -c partition=aws
+
