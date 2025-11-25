@@ -1,17 +1,17 @@
 mandatoryAccounts:
   - name: Management
     description: AWS Organizations management account
-    email: 2karthik.cloudeng@gmail.com
+    email: Karthik.Shekar@Ethan.com.au
     organizationalUnit: Root
 
   - name: LogArchive
     description: Central log archive account
-    email: 2karthik.cloudeng+log@gmail.com
+    email: Karthik.Shekar+log@Ethan.com.au
     organizationalUnit: Security
 
   - name: Audit
     description: Security / audit account
-    email: 2karthik.cloudeng+audit@gmail.com
+    email: Karthik.Shekar+audit@Ethan.com.au
     organizationalUnit: Security
 
 workloadAccounts: []
