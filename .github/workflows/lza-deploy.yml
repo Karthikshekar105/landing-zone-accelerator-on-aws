@@ -49,7 +49,7 @@ jobs:
             -c config-dir=../../../../lza-config \
             -c config-mode=local \
             -c partition=aws \
-            aws://283708190530/ap-southeast-2
+            aws://288390777638/ap-southeast-2
 
       # ---------------------------------------------------------
       # CDK Synth
